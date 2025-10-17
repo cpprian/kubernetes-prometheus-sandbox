@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "devops-demo.fullname" . }}-backend
+  name: {{ include "devops-demo.name" . }}-backend
   labels:
     app: backend
 spec:
@@ -27,7 +27,7 @@ spec:
           name: http
         env:
         - name: REDIS_HOST
-          value: "{{ include "devops-demo.fullname" . }}-redis-master"
+          value: "{{ include "devops-demo.name" . }}-redis-master"
         - name: PORT
           value: "3000"
         livenessProbe:

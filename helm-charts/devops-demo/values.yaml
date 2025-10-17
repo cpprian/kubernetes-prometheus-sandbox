@@ -2,7 +2,7 @@ backend:
   replicaCount: 3
   image:
     repository: cpprian/nodejs-backend-api
-    tag: v1.0
+    tag: v1.1
     pullPolicy: IfNotPresent
   service:
     type: ClusterIP
